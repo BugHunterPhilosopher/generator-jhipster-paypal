@@ -9,5 +9,5 @@ entity PaypalCompletedPayments {
 }
 
 relationship ManyToOne{
-	PaypalCompletedPayments{user} to User{payment}
+	PaypalCompletedPayments{user} to User
 }
