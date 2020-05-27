@@ -17,7 +17,7 @@ module.exports = class extends BaseGenerator {
                 }
             },
             readConfig() {
-                this.jhipsterAppConfig = this.getJhipsterAppConfig();
+                this.jhipsterAppConfig = this.getAllJhipsterConfig();
                 if (!this.jhipsterAppConfig) {
                     this.error('Can\'t read .yo-rc.json');
                 }
@@ -158,9 +158,6 @@ module.exports = class extends BaseGenerator {
                 needle: 'jhipster-needle-add-element-to-menu',
                 splicable: [navbarCode]
             }, this);
-
-
-
 
         }
         if (this.buildTool === 'maven') {
